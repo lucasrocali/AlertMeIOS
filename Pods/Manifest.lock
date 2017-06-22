@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (4.4.0)
+  - PromiseKit (4.2.2):
+    - PromiseKit/Foundation (= 4.2.2)
+    - PromiseKit/QuartzCore (= 4.2.2)
+    - PromiseKit/UIKit (= 4.2.2)
+  - PromiseKit/CorePromise (4.2.2)
+  - PromiseKit/Foundation (4.2.2):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.2.2):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.2.2):
+    - PromiseKit/CorePromise
+  - Realm (2.7.0):
+    - Realm/Headers (= 2.7.0)
+  - Realm/Headers (2.7.0)
+  - RealmSwift (2.7.0):
+    - Realm (= 2.7.0)
+  - SwiftyJSON (3.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - PromiseKit (~> 4.0)
+  - RealmSwift
+  - SwiftyJSON (= 3.0.0)
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  PromiseKit: 00e8886881f151c7e573d06b437915b0bb2970ec
+  Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
+  RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
+  SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
+
+PODFILE CHECKSUM: 8eb79967e59691acf0da5a0c97de0e0d8925869a
+
+COCOAPODS: 1.1.1

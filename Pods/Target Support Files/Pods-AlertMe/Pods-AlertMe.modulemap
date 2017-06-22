@@ -1,0 +1,6 @@
+framework module Pods_AlertMe {
+  umbrella header "Pods-AlertMe-umbrella.h"
+
+  export *
+  module * { export * }
+}

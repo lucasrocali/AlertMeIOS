@@ -1,0 +1,6 @@
+framework module Pods_AlertMeTests {
+  umbrella header "Pods-AlertMeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
