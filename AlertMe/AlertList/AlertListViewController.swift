@@ -14,7 +14,9 @@ class AlertListViewController: UITableViewController, AlertListViewProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
+    override func viewDidAppear(_ animated: Bool) {
         presenter?.getInfo()
     }
 
@@ -64,6 +66,13 @@ class AlertListViewController: UITableViewController, AlertListViewProtocol {
 
         return cell
      }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row <= events.count {
+            let event = events[indexPath.row]
+            presenter?.selectedEvent(event: event)
+        }
+    }
 
 
     /*

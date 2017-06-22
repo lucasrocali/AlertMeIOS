@@ -19,9 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        login()
+        return true
+    }
+
+    func login() {
         let appDependencies = AppDependencies()
         appDependencies.installRootViewControllerIntoWindow(window!)
-        return true
     }
 
 

@@ -12,6 +12,8 @@ class AlertListWireframe: AlertListWireframeProtocol,TabBarInterface {
 
     var rootWireframe : MainTabBarWireFrame?
 
+    var alertDetailWireframe : AlertDetailWireframe?
+
     //var somePopupWireframe : SomePopupWireframe?
     var navigationController : UINavigationController?
     
@@ -22,6 +24,8 @@ class AlertListWireframe: AlertListWireframeProtocol,TabBarInterface {
         let interactor: AlertInteractorInputProtocol = AlertInteractor()
 
         navigationController = UINavigationController()
+
+        alertDetailWireframe = AlertDetailWireframe()
 
         //POPUPWIREFRAMES
 
@@ -42,6 +46,10 @@ class AlertListWireframe: AlertListWireframeProtocol,TabBarInterface {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let AlertListVC: AlertListViewController = storyboard.instantiateViewController(withIdentifier: AlertListViewControllerIdentifier) as! AlertListViewController
         return AlertListVC
+    }
+
+    func goToDetail(event:Event) {
+        alertDetailWireframe?.pushModule(fnavc: navigationController!, event: event)
     }
 
     // MARK: TabBarInterface

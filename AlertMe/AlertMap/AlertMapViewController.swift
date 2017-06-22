@@ -16,10 +16,11 @@ class AlertMapViewController: UIViewController, AlertMapViewProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        presenter?.getInfo()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        presenter?.getInfo()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

@@ -157,7 +157,9 @@ class User : DataStore {
         return DataManager.load(fromPath: "events")
     }
 
-
+    func loadLocationsForEventId(_ eventId:Int) -> Promise<JSON> {
+        return DataManager.load(fromPath: "locations?event_id=\(eventId)")
+    }
 
 
 }

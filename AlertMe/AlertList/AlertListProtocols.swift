@@ -27,6 +27,7 @@ protocol AlertListWireframeProtocol: class {
     //func presentSomePopupView(fpresenter : AlertListPresenter)
 
     // PRESENTER -> WIREFRAME
+    func goToDetail(event:Event)
 
 }
 
@@ -40,6 +41,7 @@ protocol AlertListPresenterProtocol: class {
 
     // VIEW -> PRESENTER
     func getInfo()
+    func selectedEvent(event:Event)
 }
 
 /*

@@ -5,5 +5,5 @@
 
 import Foundation
 
-struct CreateEventItem {
+struct AlertDetailItem {
 }

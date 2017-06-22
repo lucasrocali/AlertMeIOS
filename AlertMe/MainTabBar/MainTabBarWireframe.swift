@@ -67,6 +67,9 @@ class MainTabBarWireFrame: NSObject {
     func logout() {
         if let view = tabBarController! as? UITabBarController {
             view.dismiss(animated: true, completion: nil)
+        } else {
+            let appDelegate = AppDelegate()
+            appDelegate.login()
         }
     }
 }

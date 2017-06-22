@@ -51,6 +51,67 @@
             </objects>
             <point key="canvasLocation" x="-79" y="80"/>
         </scene>
+        <!--Alert Detail View Controller-->
+        <scene sceneID="eMO-u4-Fml">
+            <objects>
+                <viewController storyboardIdentifier="AlertDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="orA-2f-qlb" customClass="AlertDetailViewController" customModule="AlertMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RNG-Cu-E6d"/>
+                        <viewControllerLayoutGuide type="bottom" id="mNM-u0-Qzj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m6a-fc-bqI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xa-SV-FT5">
+                                <rect key="frame" x="16" y="40" width="70.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rc2-Uz-re0">
+                                <rect key="frame" x="55" y="80.5" width="28.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USO-rl-a1m">
+                                <rect key="frame" x="16" y="80.5" width="29" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nPU-oH-WjW">
+                                <rect key="frame" x="16" y="116.5" width="343" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="uaS-fY-LDo"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="USO-rl-a1m" firstAttribute="top" secondItem="3Xa-SV-FT5" secondAttribute="bottom" constant="20" id="FE3-dF-Vv4"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3Xa-SV-FT5" secondAttribute="leading" id="J3v-LY-hkt"/>
+                            <constraint firstItem="3Xa-SV-FT5" firstAttribute="top" secondItem="RNG-Cu-E6d" secondAttribute="bottom" constant="20" id="Rsu-iD-XOC"/>
+                            <constraint firstItem="USO-rl-a1m" firstAttribute="leading" secondItem="3Xa-SV-FT5" secondAttribute="leading" id="S2x-Ip-GmZ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="nPU-oH-WjW" secondAttribute="leading" id="X9D-Vz-yhJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nPU-oH-WjW" secondAttribute="trailing" id="dgg-Ai-BUi"/>
+                            <constraint firstItem="USO-rl-a1m" firstAttribute="centerY" secondItem="rc2-Uz-re0" secondAttribute="centerY" id="eY9-I4-WwR"/>
+                            <constraint firstItem="nPU-oH-WjW" firstAttribute="top" secondItem="USO-rl-a1m" secondAttribute="bottom" constant="20" id="kmL-C8-WIb"/>
+                            <constraint firstItem="rc2-Uz-re0" firstAttribute="leading" secondItem="USO-rl-a1m" secondAttribute="trailing" constant="10" id="zUW-rK-i9b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="categoryNameLbl" destination="3Xa-SV-FT5" id="kSk-jH-zyY"/>
+                        <outlet property="dateLbl" destination="rc2-Uz-re0" id="0mM-vT-0zw"/>
+                        <outlet property="mapView" destination="nPU-oH-WjW" id="7Gj-8d-5Eb"/>
+                        <outlet property="userNameLbl" destination="USO-rl-a1m" id="DZ5-9p-CBT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zwW-im-tJo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="785" y="144"/>
+        </scene>
         <!--Alert Map View Controller-->
         <scene sceneID="zOW-9U-4eb">
             <objects>
@@ -107,15 +168,15 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RN6-Hz-M35">
-                                            <rect key="frame" x="70.5" y="44" width="32.5" height="18"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <nil key="textColor"/>
+                                            <rect key="frame" x="67" y="46" width="28.5" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mry-67-jWs">
-                                            <rect key="frame" x="28" y="44" width="32.5" height="18"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <nil key="textColor"/>
+                                            <rect key="frame" x="28" y="46" width="29" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>

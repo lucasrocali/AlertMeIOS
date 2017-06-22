@@ -21,7 +21,7 @@ class AlertListPresenter: AlertListPresenterProtocol, AlertInteractorOutputProto
     var wireframe: AlertListWireframeProtocol?
 
     init() {}
-
+    //V -> P
     func leftBtnClicked() {
         //navigationWireframe?.back()
     }
@@ -33,7 +33,10 @@ class AlertListPresenter: AlertListPresenterProtocol, AlertInteractorOutputProto
     func getInfo() {
         interactor?.loadEvents()
     }
-
+    func selectedEvent(event:Event) {
+        wireframe?.goToDetail(event: event)
+    }
+    //I -> P
     internal func eventsLoaded() {
         print("eventsLoaded")
         if let events = interactor?.getEvents() {
